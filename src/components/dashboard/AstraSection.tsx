@@ -6,7 +6,7 @@ export default function AstraSection() {
         {/* Left Side - AI GPU Ecosystem */}
         <div className='col-span-4 space-y-6'>
           <div>
-            <div className='text-orange-400 text-lg mb-2'>AI for</div>
+            <div className='text-orange-400 text-lg mb-2'>All in</div>
             <div className='text-white text-6xl font-bold mb-2'>One</div>
             <div className='flex items-center space-x-4 mb-4'>
               <svg

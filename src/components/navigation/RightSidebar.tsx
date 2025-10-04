@@ -1,6 +1,22 @@
 export default function RightSidebar() {
   return (
-    <div className='w-80 bg-gray-900 border-l border-gray-800 p-4 overflow-y-auto'>
+    <div className='w-full p-4'>
+      {/* Header with Profile and Feed */}
+      <div className='flex items-center justify-between mb-6 pb-4 border-b border-gray-700'>
+        {/* Profile */}
+        <div className='flex items-center space-x-2'>
+          <div className='w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center'>
+            <span className='text-white text-sm'>👤</span>
+          </div>
+          <span className='text-gray-300 text-sm'>Profile</span>
+          <span className='text-gray-400'>|</span>
+          <span className='text-gray-300 text-sm'>0x78..0x78</span>
+        </div>
+
+        {/* Feed Label */}
+        <span className='text-gray-300 text-sm font-medium'>Feed</span>
+      </div>
+
       {/* Profile Section */}
       <div className='mb-6'>
         <div className='flex items-center space-x-3 mb-4'>
@@ -25,8 +41,6 @@ export default function RightSidebar() {
 
       {/* Activity Feed */}
       <div className='space-y-4'>
-        <h3 className='text-white font-semibold'>Feed</h3>
-
         {/* Activity Items */}
         {[
           {
