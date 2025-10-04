@@ -6,9 +6,9 @@ import RightSidebar from '../navigation/RightSidebar';
 
 export default function MainLayout() {
   return (
-    <div className='min-h-screen bg-black text-white flex flex-col lg:flex-row'>
-      {/* Left Sidebar - Hidden on mobile, shown on desktop */}
-      <div className='hidden lg:block'>
+    <div className='min-h-screen bg-black text-white flex flex-col md:flex-row'>
+      {/* Left Sidebar - Hidden on mobile, shown on tablet+ */}
+      <div className='hidden md:block'>
         <Sidebar />
       </div>
 

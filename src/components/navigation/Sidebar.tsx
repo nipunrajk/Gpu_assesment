@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <div className='w-64 lg:w-72 xl:w-64 bg-black border-r border-gray-800 flex flex-col h-screen'>
       {/* Logo */}
-      <div className='p-6 border-b border-gray-800'>
+      <div className='p-6 pb-0'>
         <div className='flex items-center space-x-3'>
           <div className='w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center'>
             <span className='text-white font-bold text-lg'>G</span>
@@ -30,30 +30,36 @@ export default function Sidebar() {
       </div>
 
       {/* Wallet Balance */}
-      <div className='p-6 border-b border-gray-800'>
-        <div className='mb-3'>
+      <div className='p-6 '>
+        <div className='mb-3'></div>
+        <div className='bg-slate-700 rounded-lg p-4 border border-gray-700'>
           <div className='text-gray-400 text-sm font-medium'>
             Wallet Balance
           </div>
-        </div>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center space-x-2'>
-            <div className='w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center'>
-              <span className='text-white text-xs font-bold'>G</span>
+          <div className='flex items-center justify-between'>
+            <div className='flex items-center space-x-2'>
+              <div className='w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center'>
+                <span className='text-white text-xs font-bold'>G</span>
+              </div>
+              <span className='text-white text-2xl font-bold'>3900</span>
+              <span className='text-gray-400 text-sm'>.88</span>
             </div>
-            <span className='text-white text-2xl font-bold'>3900</span>
-            <span className='text-gray-400 text-sm'>.88</span>
+            <button className='w-8 h-8 bg-white hover:bg-gray-700 rounded-full flex items-center justify-center border border-gray-600'>
+              <span className='text-black text-lg'>+</span>
+            </button>
           </div>
-          <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center border border-gray-600'>
-            <span className='text-white text-lg'>+</span>
-          </button>
         </div>
       </div>
 
       {/* Navigation */}
       <nav className='flex-1 p-4 space-y-1 overflow-y-auto'>
         {navigationItems.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className='relative'>
+            <div
+              className={`active-indicator ${
+                activeItem === item.id ? 'active' : ''
+              }`}
+            />
             <button
               onClick={() => setActiveItem(item.id)}
               className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left transition-colors group ${
@@ -147,7 +153,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Bottom Section */}
-      <div className='p-4 border-t border-gray-800'>
+      <div className='p-4'>
         {/* Social Icons */}
         <div className='flex items-center space-x-3 mb-4'>
           <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>

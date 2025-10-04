@@ -14,3 +14,13 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
+
+@layer components {
+  .active-indicator {
+    @apply absolute left-0 top-0 bottom-0 w-1 transition-all duration-200 bg-transparent opacity-0;
+  }
+
+  .active-indicator.active {
+    @apply bg-orange-500 opacity-100;
+  }
+}
