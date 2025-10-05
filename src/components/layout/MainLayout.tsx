@@ -15,19 +15,22 @@ export default function MainLayout() {
         {/* Main Dashboard */}
         <main className='flex-1 flex overflow-hidden'>
           <div
-            className='flex-1 flex flex-col m-2 rounded-lg overflow-hidden'
+            className='flex-1 flex flex-col m-2'
             style={{ flexBasis: '70%' }}
           >
-            <div className='bg-gray-900 rounded-lg flex flex-col h-full'>
-              {/* Top Notification Banner - Only for Dashboard */}
-              <div className='bg-gray-900 border-b border-gray-800 px-4 py-2 rounded-t-lg'>
-                <div className='flex items-center justify-center space-x-8 text-sm text-gray-300'>
-                  <span>🎯 Drops with Astra Quest Now</span>
-                  <span>📱 nVidia RTX 6087 is now available in dApp</span>
-                  <span>📈 Block Rate has been doubled now</span>
-                  <span>💰 Earn $000 Drop</span>
-                </div>
+            {/* Top Notification Banner */}
+            <div className='bg-black/40 px-4 py-2 mb-2'>
+              <div className='flex items-center justify-between text-sm text-gray-300'>
+                <span>🎯 Drops with Astra Quest Now</span>
+                <span>|</span>
+                <span>📱 nVidia RTX 6087 is now available in dApp</span>
+                <span>|</span>
+                <span>📈 Block Rate has been doubled now</span>
+                <span>|</span>
+                <span>💰 Earn $000 Drop</span>
               </div>
+            </div>
+            <div className='bg-gray-900 rounded-lg flex flex-col h-full'>
               <div className='p-6 flex-1 overflow-y-auto'>
                 <Dashboard />
               </div>
