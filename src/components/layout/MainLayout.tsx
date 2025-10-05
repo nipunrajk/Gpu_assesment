@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Menu } from 'lucide-react';
 import Sidebar from '../navigation/Sidebar';
 import Dashboard from '../dashboard/Dashboard';
 import RightSidebar from '../navigation/RightSidebar';
@@ -10,8 +11,11 @@ export default function MainLayout() {
   return (
     <div className='min-h-screen bg-gray-950 text-white flex flex-col md:flex-row overflow-hidden'>
       {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-      
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
+
       {/* Left Sidebar - Hidden on mobile, shown on tablet+ */}
       <div className='hidden md:block'>
         <Sidebar />
@@ -31,19 +35,7 @@ export default function MainLayout() {
             onClick={() => setIsMobileMenuOpen(true)}
             className='text-white p-2'
           >
-            <svg
-              className='w-6 h-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M4 6h16M4 12h16M4 18h16'
-              />
-            </svg>
+            <Menu />
           </button>
         </div>
         {/* Main Dashboard */}
@@ -53,13 +45,21 @@ export default function MainLayout() {
             <div className='bg-black/40 px-2 sm:px-4 py-2 mb-2 overflow-hidden'>
               <div className='flex items-center text-sm text-gray-300 overflow-x-auto scrollbar-hide'>
                 <div className='flex items-center space-x-2 sm:space-x-4 whitespace-nowrap min-w-0'>
-                  <span className='flex-shrink-0'>🎯 Drops with Astra Quest Now</span>
+                  <span className='flex-shrink-0'>
+                    🎯 Drops with Astra Quest Now
+                  </span>
                   <span className='hidden sm:inline flex-shrink-0'>|</span>
-                  <span className='hidden sm:inline flex-shrink-0'>📱 nVidia RTX 6087 is now available in dApp</span>
+                  <span className='hidden sm:inline flex-shrink-0'>
+                    📱 nVidia RTX 6087 is now available in dApp
+                  </span>
                   <span className='hidden md:inline flex-shrink-0'>|</span>
-                  <span className='hidden md:inline flex-shrink-0'>📈 Block Rate has been doubled now</span>
+                  <span className='hidden md:inline flex-shrink-0'>
+                    📈 Block Rate has been doubled now
+                  </span>
                   <span className='hidden lg:inline flex-shrink-0'>|</span>
-                  <span className='hidden lg:inline flex-shrink-0'>💰 Earn $000 Drop</span>
+                  <span className='hidden lg:inline flex-shrink-0'>
+                    💰 Earn $000 Drop
+                  </span>
                 </div>
               </div>
             </div>

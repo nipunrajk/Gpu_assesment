@@ -1,8 +1,20 @@
 import { useState } from 'react';
+import {
+  MessageCircle,
+  List,
+  ChartBarStacked,
+  ArrowLeftRight,
+  Server,
+} from 'lucide-react';
 import { navigationItems } from '../../constants/navigation';
 
 export default function Sidebar() {
   const [activeItem, setActiveItem] = useState('dapp');
+
+  const handleItemClick = (itemId: string) => {
+    console.log('Sidebar navigation clicked:', itemId);
+    setActiveItem(itemId);
+  };
 
   return (
     <div className='w-56 lg:w-60 xl:w-64 bg-black border-r border-gray-800 flex flex-col h-screen flex-shrink-0'>
@@ -12,7 +24,9 @@ export default function Sidebar() {
           <div className='w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center'>
             <span className='text-white font-bold text-base sm:text-lg'>G</span>
           </div>
-          <span className='text-white font-bold text-lg sm:text-xl'>GPU.NET</span>
+          <span className='text-white font-bold text-lg sm:text-xl'>
+            GPU.NET
+          </span>
         </div>
       </div>
 
@@ -28,7 +42,9 @@ export default function Sidebar() {
               <div className='w-5 h-5 sm:w-6 sm:h-6 bg-gray-700 rounded-full flex items-center justify-center'>
                 <span className='text-white text-xs font-bold'>G</span>
               </div>
-              <span className='text-white text-xl sm:text-2xl font-bold'>3900</span>
+              <span className='text-white text-xl sm:text-2xl font-bold'>
+                3900
+              </span>
               <span className='text-gray-400 text-sm'>.88</span>
             </div>
             <button className='w-6 h-6 sm:w-8 sm:h-8 bg-white hover:bg-gray-700 rounded-full flex items-center justify-center border border-gray-600'>
@@ -39,7 +55,10 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className='flex-1 p-3 sm:p-4 space-y-1 overflow-y-auto'>
+      <nav
+        className='flex-1 p-3 sm:p-4 space-y-1 overflow-y-auto'
+        style={{ pointerEvents: 'all' }}
+      >
         {navigationItems.map((item) => (
           <div key={item.id} className='relative'>
             <div
@@ -48,67 +67,21 @@ export default function Sidebar() {
               }`}
             />
             <button
-              onClick={() => setActiveItem(item.id)}
-              className={`w-full flex items-center space-x-3 p-2 sm:p-3 rounded-lg text-left transition-colors group ${
+              onClick={() => handleItemClick(item.id)}
+              className={`relative z-10 w-full flex items-center space-x-3 p-2 sm:p-3 rounded-lg text-left transition-all duration-200 cursor-pointer select-none touch-manipulation border border-gray-600 ${
                 activeItem === item.id
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-400 hover:bg-gray-900 hover:text-white'
+                  ? 'bg-gray-800 text-white border-gray-500'
+                  : 'text-gray-400 hover:bg-gray-900 hover:text-white border-gray-600'
               }`}
+              type='button'
+              style={{ pointerEvents: 'all' }}
             >
               <div className='w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center'>
-                {item.id === 'dapp' && (
-                  <svg
-                    className='w-4 h-4 sm:w-5 sm:h-5'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                  >
-                    <path d='M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z' />
-                  </svg>
-                )}
-                {item.id === 'astra-chat' && (
-                  <svg
-                    className='w-5 h-5'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z'
-                      clipRule='evenodd'
-                    />
-                  </svg>
-                )}
-                {item.id === 'subnet' && (
-                  <svg
-                    className='w-5 h-5'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                  >
-                    <path d='M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z' />
-                  </svg>
-                )}
-                {item.id === 'quest' && (
-                  <svg
-                    className='w-5 h-5'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z'
-                      clipRule='evenodd'
-                    />
-                  </svg>
-                )}
-                {item.id === 'ganscan' && (
-                  <svg
-                    className='w-5 h-5'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                  >
-                    <path d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' />
-                  </svg>
-                )}
+                {item.id === 'dapp' && <Server />}
+                {item.id === 'astra-chat' && <MessageCircle />}
+                {item.id === 'subnet' && <List />}
+                {item.id === 'quest' && <ChartBarStacked />}
+                {item.id === 'ganscan' && <ArrowLeftRight />}
                 {item.id === 'gvex' && (
                   <svg
                     className='w-5 h-5'
@@ -119,7 +92,9 @@ export default function Sidebar() {
                   </svg>
                 )}
               </div>
-              <span className='font-medium text-sm sm:text-base'>{item.label}</span>
+              <span className='font-medium text-sm sm:text-base'>
+                {item.label}
+              </span>
             </button>
 
             {/* Sub-items for dApp */}
@@ -128,7 +103,9 @@ export default function Sidebar() {
                 {item.subItems.map((subItem, index) => (
                   <button
                     key={index}
-                    className='block w-full text-left text-gray-400 hover:text-white text-xs sm:text-sm py-1 px-2 rounded transition-colors'
+                    onClick={() => console.log('Sub-item clicked:', subItem)}
+                    className='block w-full text-left text-gray-400 hover:text-white text-xs sm:text-sm py-1 px-2 rounded transition-colors cursor-pointer select-none'
+                    type='button'
                   >
                     {subItem}
                   </button>
@@ -154,7 +131,9 @@ export default function Sidebar() {
             </svg>
           </button>
           <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
-            <span className='text-gray-400 font-bold text-xs sm:text-sm'>X</span>
+            <span className='text-gray-400 font-bold text-xs sm:text-sm'>
+              X
+            </span>
           </button>
           <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
             <svg

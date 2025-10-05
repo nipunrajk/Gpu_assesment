@@ -17,7 +17,9 @@ export default function AstraSection() {
               >
                 <path d='M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z' />
               </svg>
-              <div className='text-orange-400 text-xs sm:text-sm'>Active Users</div>
+              <div className='text-orange-400 text-xs sm:text-sm'>
+                Active Users
+              </div>
             </div>
             <div className='text-white text-xl sm:text-2xl font-bold'>705K</div>
           </div>
@@ -32,7 +34,9 @@ export default function AstraSection() {
               >
                 <path d='M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z' />
               </svg>
-              <div className='text-orange-400 text-xs sm:text-sm'>Total Subnets</div>
+              <div className='text-orange-400 text-xs sm:text-sm'>
+                Total Subnets
+              </div>
             </div>
             <div className='text-white text-xl sm:text-2xl font-bold'>11K</div>
           </div>
@@ -51,7 +55,9 @@ export default function AstraSection() {
                   clipRule='evenodd'
                 />
               </svg>
-              <div className='text-orange-400 text-xs sm:text-sm'>$GPU Distributed</div>
+              <div className='text-orange-400 text-xs sm:text-sm'>
+                $GPU Distributed
+              </div>
             </div>
             <div className='text-white text-xl sm:text-2xl font-bold'>1.1m</div>
           </div>
@@ -71,9 +77,13 @@ export default function AstraSection() {
                   clipRule='evenodd'
                 />
               </svg>
-              <div className='text-orange-400 text-xs sm:text-sm'>$GPU Price</div>
+              <div className='text-orange-400 text-xs sm:text-sm'>
+                $GPU Price
+              </div>
             </div>
-            <div className='text-white text-xl sm:text-2xl font-bold'>$0.43</div>
+            <div className='text-white text-xl sm:text-2xl font-bold'>
+              $0.43
+            </div>
             {/* Mini chart */}
             <div className='absolute top-2 right-2 w-12 h-6 sm:w-16 sm:h-8'>
               <ChartNoAxesCombined className='w-full h-full' />
@@ -102,10 +112,14 @@ export default function AstraSection() {
         <div className='bg-gray-900 rounded-lg p-3 sm:p-4 border border-gray-800 mb-6'>
           <div className='flex items-center space-x-4'>
             <div className='w-10 h-10 sm:w-12 sm:h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0'>
-              <span className='text-white text-base sm:text-lg font-bold'>A</span>
+              <span className='text-white text-base sm:text-lg font-bold'>
+                A
+              </span>
             </div>
             <div className='flex-1 min-w-0'>
-              <h3 className='text-white text-base sm:text-lg font-bold mb-1'>Try Astra</h3>
+              <h3 className='text-white text-base sm:text-lg font-bold mb-1'>
+                Try Astra
+              </h3>
               <p className='text-gray-300 text-xs sm:text-sm break-words'>
                 Generate images & videos using state-of-the-art generative
                 models powered by GPU with exclusive partnership with{' '}
@@ -124,7 +138,9 @@ export default function AstraSection() {
               <div className='text-gray-400 text-xs sm:text-sm mb-2'>
                 Our Datacenter in Glance
               </div>
-              <div className='text-white text-2xl sm:text-4xl font-bold mb-1'>4,254</div>
+              <div className='text-white text-2xl sm:text-4xl font-bold mb-1'>
+                4,254
+              </div>
               <div className='text-orange-400 text-xs sm:text-sm flex items-center'>
                 <span>99.9% Uptime</span>
                 <svg
@@ -146,15 +162,23 @@ export default function AstraSection() {
               <div className='grid grid-cols-2 sm:grid-cols-5 h-full text-xs sm:text-sm'>
                 {/* United States */}
                 <div className='p-2 sm:p-3 md:p-6 border-r border-gray-800 text-center'>
-                  <div className='text-gray-400 mb-1 sm:mb-2'>United States</div>
-                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>508</div>
+                  <div className='text-gray-400 mb-1 sm:mb-2'>
+                    United States
+                  </div>
+                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>
+                    508
+                  </div>
                   <div className='text-gray-400'>GPUs</div>
                 </div>
 
                 {/* United Kingdom */}
                 <div className='p-2 sm:p-3 md:p-6 border-b sm:border-b-0 sm:border-r border-gray-800 text-center'>
-                  <div className='text-gray-400 mb-1 sm:mb-2'>United Kingdom</div>
-                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>354</div>
+                  <div className='text-gray-400 mb-1 sm:mb-2'>
+                    United Kingdom
+                  </div>
+                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>
+                    354
+                  </div>
                   <div className='text-gray-400'>GPUs</div>
                 </div>
 
@@ -162,23 +186,31 @@ export default function AstraSection() {
                 <div className='p-2 sm:p-3 md:p-6 border-r border-gray-800 text-center'>
                   <div className='text-gray-400 mb-1 sm:mb-2'>
                     <span className='sm:hidden'>UAE</span>
-                    <span className='hidden sm:inline'>United Arab Emirates</span>
+                    <span className='hidden sm:inline'>
+                      United Arab Emirates
+                    </span>
                   </div>
-                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>154</div>
+                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>
+                    154
+                  </div>
                   <div className='text-gray-400'>GPUs</div>
                 </div>
 
                 {/* Australia */}
                 <div className='p-2 sm:p-3 md:p-6 border-b sm:border-b-0 sm:border-r border-gray-800 text-center'>
                   <div className='text-gray-400 mb-1 sm:mb-2'>Australia</div>
-                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>104</div>
+                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>
+                    104
+                  </div>
                   <div className='text-gray-400'>GPUs</div>
                 </div>
 
                 {/* Spain */}
                 <div className='p-2 sm:p-3 md:p-6 text-center'>
                   <div className='text-gray-400 mb-1 sm:mb-2'>Spain</div>
-                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>21</div>
+                  <div className='text-white text-base sm:text-lg md:text-3xl font-bold'>
+                    21
+                  </div>
                   <div className='text-gray-400'>GPUs</div>
                 </div>
               </div>

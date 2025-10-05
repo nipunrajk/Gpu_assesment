@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { X } from 'lucide-react';
 
 const navigationItems = [
   { id: 'dapp', label: 'dApp', active: true },
@@ -31,19 +32,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <span className='text-white font-semibold text-lg'>GPU.NET</span>
           </div>
           <button onClick={onClose} className='text-gray-400 hover:text-white'>
-            <svg
-              className='w-6 h-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M6 18L18 6M6 6l12 12'
-              />
-            </svg>
+            <X />
           </button>
         </div>
 
