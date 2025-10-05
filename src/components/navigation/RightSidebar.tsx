@@ -1,5 +1,5 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Rss, LogIn, UserRoundPen } from 'lucide-react';
+import { Rss, UserRoundPen } from 'lucide-react';
+import { CustomConnectButton } from '../wallet/CustomConnectButton';
 
 export default function RightSidebar() {
   return (
@@ -7,14 +7,10 @@ export default function RightSidebar() {
       <div className='flex items-end mb-0'>
         {/* Profile - Left side */}
         <div className='flex items-center space-x-2 text-xxs mb-2'>
-          <UserRoundPen className='w-4 h-4 ' />
-          <span className='text-gray-300  font-medium'>Profile</span>
+          <UserRoundPen className='w-4 h-4' />
+          <span className='text-gray-300 font-medium'>Profile</span>
           <span className='text-gray-400 hidden sm:inline'>|</span>
-          <span className='text-gray-300 truncate'>0x78..0x78</span>
-          <LogIn className='w-4 h-4' />
-          <div className='absolute inset-0 opacity-0'>
-            <ConnectButton />
-          </div>
+          <CustomConnectButton />
         </div>
 
         {/* Spacer */}
