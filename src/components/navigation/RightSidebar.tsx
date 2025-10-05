@@ -4,15 +4,10 @@ import { Rss, LogIn } from 'lucide-react';
 export default function RightSidebar() {
   return (
     <div className='w-full h-full flex flex-col p-4 space-y-4'>
-      {/* Profile and Feed - Standalone elements at top */}
-      <div className='flex justify-between  items-center mb-0'>
-        {/* Profile - Standalone element */}
-        <div
-          className='flex items-center space-x-2 mb-1'
-          style={{
-            borderRadius: '8px',
-          }}
-        >
+      {/* Profile and Feed - Same line layout */}
+      <div className='flex justify-between items-end mb-0'>
+        {/* Profile - Left side */}
+        <div className='flex items-center space-x-2'>
           <div className='w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center'>
             <span className='text-white text-sm'>👤</span>
           </div>
@@ -25,17 +20,17 @@ export default function RightSidebar() {
           </div>
         </div>
 
-        {/* Feed Label - Standalone element */}
-        <div className='flex flex-col items-center'>
-          <div className='relative flex items-center space-x-2 hover:bg-gray-700 px-3 py-2 transition-colors bg-gray-800 border-2 border-gray-600'>
-            <Rss />
+        {/* Feed Tab - Right side */}
+        <div className='relative bg-gray-800 px-4 py-2 rounded-t-lg '>
+          <div className='flex items-center space-x-2'>
+            <Rss className='text-gray-300' />
             <span className='text-gray-300 text-sm font-medium'>Feed</span>
           </div>
         </div>
       </div>
 
-      {/* Post Composer - Separate standalone container */}
-      <div className='bg-gray-800 border-2 border-gray-600 rounded-lg p-4'>
+      {/* Post Composer - Connected to Feed tab */}
+      <div className='bg-gray-800  p-4 mb-4'>
         <div className='flex items-center space-x-3 mb-4'>
           <div className='w-10 h-10 bg-gray-600 rounded-full'></div>
           <div>
@@ -147,6 +142,5 @@ export default function RightSidebar() {
         ))}
       </div>
     </div>
-    // </div>
   );
 }
