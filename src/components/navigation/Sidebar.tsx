@@ -18,41 +18,41 @@ export default function Sidebar() {
   const [activeItem, setActiveItem] = useState('dapp');
 
   return (
-    <div className='w-64 lg:w-72 xl:w-64 bg-black border-r border-gray-800 flex flex-col h-screen'>
+    <div className='w-56 lg:w-60 xl:w-64 bg-black border-r border-gray-800 flex flex-col h-screen flex-shrink-0'>
       {/* Logo */}
-      <div className='p-6 pb-0'>
+      <div className='p-4 sm:p-6 pb-0'>
         <div className='flex items-center space-x-3'>
-          <div className='w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center'>
-            <span className='text-white font-bold text-lg'>G</span>
+          <div className='w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center'>
+            <span className='text-white font-bold text-base sm:text-lg'>G</span>
           </div>
-          <span className='text-white font-bold text-xl'>GPU.NET</span>
+          <span className='text-white font-bold text-lg sm:text-xl'>GPU.NET</span>
         </div>
       </div>
 
       {/* Wallet Balance */}
-      <div className='p-6 '>
+      <div className='p-4 sm:p-6'>
         <div className='mb-3'></div>
-        <div className='bg-slate-700 rounded-lg p-4 border border-gray-700'>
-          <div className='text-gray-400 text-sm font-medium'>
+        <div className='bg-slate-700 rounded-lg p-3 sm:p-4 border border-gray-700'>
+          <div className='text-gray-400 text-xs sm:text-sm font-medium'>
             Wallet Balance
           </div>
           <div className='flex items-center justify-between'>
             <div className='flex items-center space-x-2'>
-              <div className='w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center'>
+              <div className='w-5 h-5 sm:w-6 sm:h-6 bg-gray-700 rounded-full flex items-center justify-center'>
                 <span className='text-white text-xs font-bold'>G</span>
               </div>
-              <span className='text-white text-2xl font-bold'>3900</span>
+              <span className='text-white text-xl sm:text-2xl font-bold'>3900</span>
               <span className='text-gray-400 text-sm'>.88</span>
             </div>
-            <button className='w-8 h-8 bg-white hover:bg-gray-700 rounded-full flex items-center justify-center border border-gray-600'>
-              <span className='text-black text-lg'>+</span>
+            <button className='w-6 h-6 sm:w-8 sm:h-8 bg-white hover:bg-gray-700 rounded-full flex items-center justify-center border border-gray-600'>
+              <span className='text-black text-base sm:text-lg'>+</span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
-      <nav className='flex-1 p-4 space-y-1 overflow-y-auto'>
+      <nav className='flex-1 p-3 sm:p-4 space-y-1 overflow-y-auto'>
         {navigationItems.map((item) => (
           <div key={item.id} className='relative'>
             <div
@@ -62,16 +62,16 @@ export default function Sidebar() {
             />
             <button
               onClick={() => setActiveItem(item.id)}
-              className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left transition-colors group ${
+              className={`w-full flex items-center space-x-3 p-2 sm:p-3 rounded-lg text-left transition-colors group ${
                 activeItem === item.id
                   ? 'bg-gray-800 text-white'
                   : 'text-gray-400 hover:bg-gray-900 hover:text-white'
               }`}
             >
-              <div className='w-5 h-5 flex items-center justify-center'>
+              <div className='w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center'>
                 {item.id === 'dapp' && (
                   <svg
-                    className='w-5 h-5'
+                    className='w-4 h-4 sm:w-5 sm:h-5'
                     fill='currentColor'
                     viewBox='0 0 20 20'
                   >
@@ -132,16 +132,16 @@ export default function Sidebar() {
                   </svg>
                 )}
               </div>
-              <span className='font-medium'>{item.label}</span>
+              <span className='font-medium text-sm sm:text-base'>{item.label}</span>
             </button>
 
             {/* Sub-items for dApp */}
             {item.id === 'dapp' && activeItem === 'dapp' && item.subItems && (
-              <div className='ml-8 mt-2 space-y-1'>
+              <div className='ml-6 sm:ml-8 mt-2 space-y-1'>
                 {item.subItems.map((subItem, index) => (
                   <button
                     key={index}
-                    className='block w-full text-left text-gray-400 hover:text-white text-sm py-1 px-2 rounded transition-colors'
+                    className='block w-full text-left text-gray-400 hover:text-white text-xs sm:text-sm py-1 px-2 rounded transition-colors'
                   >
                     {subItem}
                   </button>
@@ -153,12 +153,12 @@ export default function Sidebar() {
       </nav>
 
       {/* Bottom Section */}
-      <div className='p-4'>
+      <div className='p-3 sm:p-4'>
         {/* Social Icons */}
-        <div className='flex items-center space-x-3 mb-4'>
-          <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
+        <div className='flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4'>
+          <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
             <svg
-              className='w-4 h-4 text-gray-400'
+              className='w-3 h-3 sm:w-4 sm:h-4 text-gray-400'
               fill='currentColor'
               viewBox='0 0 20 20'
             >
@@ -166,12 +166,12 @@ export default function Sidebar() {
               <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
             </svg>
           </button>
-          <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
-            <span className='text-gray-400 font-bold text-sm'>X</span>
+          <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
+            <span className='text-gray-400 font-bold text-xs sm:text-sm'>X</span>
           </button>
-          <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
+          <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
             <svg
-              className='w-4 h-4 text-gray-400'
+              className='w-3 h-3 sm:w-4 sm:h-4 text-gray-400'
               fill='currentColor'
               viewBox='0 0 20 20'
             >
@@ -182,9 +182,9 @@ export default function Sidebar() {
               />
             </svg>
           </button>
-          <button className='w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
+          <button className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gray-700 rounded flex items-center justify-center'>
             <svg
-              className='w-4 h-4 text-gray-400'
+              className='w-3 h-3 sm:w-4 sm:h-4 text-gray-400'
               fill='currentColor'
               viewBox='0 0 20 20'
             >
@@ -198,8 +198,8 @@ export default function Sidebar() {
         </div>
 
         {/* Status */}
-        <div className='flex items-center space-x-2 mb-2'>
-          <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+        <div className='flex items-center space-x-2 mb-1 sm:mb-2'>
+          <div className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full'></div>
           <span className='text-gray-400 text-xs'>All Systems Operational</span>
         </div>
 
