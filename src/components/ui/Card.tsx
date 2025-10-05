@@ -13,14 +13,14 @@ export default function Card({
 }: CardProps) {
   const paddingClasses = {
     none: '',
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8',
+    sm: 'p-3 sm:p-4',
+    md: 'p-4 sm:p-6',
+    lg: 'p-6 sm:p-8',
   };
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-sm border border-gray-200 ${paddingClasses[padding]} ${className}`}
+      className={`bg-gray-900 rounded-lg shadow-sm border border-gray-800 ${paddingClasses[padding]} ${className}`}
     >
       {children}
     </div>

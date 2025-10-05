@@ -6,11 +6,41 @@
   --color-orange-400: #fb923c;
   --color-orange-500: #f97316;
   --color-orange-600: #ea580c;
+
+  --text-xxs: 12px;
 }
 
 @layer base {
   body {
     font-family: var(--font-family-sans);
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .active-indicator {
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 transition-all duration-200 bg-transparent opacity-0 z-0 rounded-r-full;
+  }
+
+  .active-indicator.active {
+    @apply bg-orange-500 opacity-100 shadow-md;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

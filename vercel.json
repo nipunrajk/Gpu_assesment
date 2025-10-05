@@ -2,5 +2,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "framework": "vite",
+  "env": {
+    "VITE_WALLET_CONNECT_PROJECT_ID": "@wallet_connect_project_id"
+  }
 }
