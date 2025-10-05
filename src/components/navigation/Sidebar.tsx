@@ -61,21 +61,21 @@ export default function Sidebar() {
       >
         {navigationItems.map((item) => (
           <div key={item.id} className='relative'>
-            <div
-              className={`active-indicator ${
-                activeItem === item.id ? 'active' : ''
-              }`}
-            />
             <button
               onClick={() => handleItemClick(item.id)}
-              className={`relative z-10 w-full flex items-center space-x-3 p-2 sm:p-3 rounded-lg text-left transition-all duration-200 cursor-pointer select-none touch-manipulation border border-gray-600 ${
+              className={`relative w-full flex items-center space-x-3 p-2 sm:p-3 rounded-lg text-left transition-all duration-200 cursor-pointer select-none touch-manipulation ${
                 activeItem === item.id
-                  ? 'bg-gray-800 text-white border-gray-500'
-                  : 'text-gray-400 hover:bg-gray-900 hover:text-white border-gray-600'
+                  ? 'text-white'
+                  : 'text-gray-400 hover:bg-gray-900 hover:text-white'
               }`}
               type='button'
               style={{ pointerEvents: 'all' }}
             >
+              <div
+                className={`active-indicator ${
+                  activeItem === item.id ? 'active' : ''
+                }`}
+              />
               <div className='w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center'>
                 {item.id === 'dapp' && <Server />}
                 {item.id === 'astra-chat' && <MessageCircle />}

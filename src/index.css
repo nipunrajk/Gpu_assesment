@@ -28,11 +28,11 @@
 
 @layer components {
   .active-indicator {
-    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 transition-all duration-200 bg-transparent opacity-0 z-0 rounded-r-full;
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 transition-all duration-200 bg-gray-700 opacity-100 z-0 rounded-r-full;
   }
 
   .active-indicator.active {
-    @apply bg-orange-500 opacity-100 shadow-md;
+    @apply bg-orange-500 opacity-100 shadow-lg w-1.5 h-8;
   }
 
   .scrollbar-hide {

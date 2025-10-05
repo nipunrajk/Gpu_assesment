@@ -65,7 +65,9 @@ export default function RightSidebar() {
                   />
                 </svg>
               </button>
-              <button className='hover:text-white text-xs sm:text-sm'>GIF</button>
+              <button className='hover:text-white text-xs sm:text-sm'>
+                GIF
+              </button>
             </div>
             <button className='bg-white hover:bg-gray-100 text-black px-4 sm:px-6 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm'>
               Post Now
@@ -75,75 +77,75 @@ export default function RightSidebar() {
 
         {/* Activity Feed - Inside same container */}
         <div className='flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4'>
-        {/* Activity Items */}
-        {[
-          {
-            name: 'Stephen Smith',
-            time: '2h',
-            message:
-              'Just completed algorithm & data structures! Time for a breather. Suggestions for a binge-worthy show? 🤔',
-            reactions: '❤️ 💬 🔄',
-          },
-          {
-            name: 'Boost',
-            time: '4h',
-            message:
-              'New GPU cluster available in US East region. Perfect for ML training workloads.',
-            reactions: '❤️ 💬 🔄',
-          },
-          {
-            name: 'Song Chewie',
-            time: '6h',
-            message:
-              'Amazing performance improvements with the latest CUDA updates!',
-            reactions: '❤️ 💬 🔄',
-            hasImage: true,
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className='bg-gray-700 rounded-lg p-3 sm:p-4 border border-gray-600'
-          >
-            <div className='flex items-start space-x-2 sm:space-x-3'>
-              <div className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-600 rounded-full flex-shrink-0'></div>
-              <div className='flex-1 min-w-0'>
-                <div className='flex items-center space-x-2 mb-1'>
-                  <div className='text-white text-xs sm:text-sm font-medium'>
-                    {item.name}
+          {/* Activity Items */}
+          {[
+            {
+              name: 'Stephen Smith',
+              time: '2h',
+              message:
+                'Just completed algorithm & data structures! Time for a breather. Suggestions for a binge-worthy show? 🤔',
+              reactions: '❤️ 💬 🔄',
+            },
+            {
+              name: 'Boost',
+              time: '4h',
+              message:
+                'New GPU cluster available in US East region. Perfect for ML training workloads.',
+              reactions: '❤️ 💬 🔄',
+            },
+            {
+              name: 'Song Chewie',
+              time: '6h',
+              message:
+                'Amazing performance improvements with the latest CUDA updates!',
+              reactions: '❤️ 💬 🔄',
+              hasImage: true,
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className='bg-gray-700 rounded-lg p-3 sm:p-4 border border-gray-600'
+            >
+              <div className='flex items-start space-x-2 sm:space-x-3'>
+                <div className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-600 rounded-full flex-shrink-0'></div>
+                <div className='flex-1 min-w-0'>
+                  <div className='flex items-center space-x-2 mb-1'>
+                    <div className='text-white text-xs sm:text-sm font-medium'>
+                      {item.name}
+                    </div>
+                    <div className='text-gray-400 text-xs'>{item.time}</div>
                   </div>
-                  <div className='text-gray-400 text-xs'>{item.time}</div>
-                </div>
-                <div className='text-gray-300 text-xs sm:text-sm mb-2 sm:mb-3 break-words'>
-                  {item.message}
-                </div>
+                  <div className='text-gray-300 text-xs sm:text-sm mb-2 sm:mb-3 break-words'>
+                    {item.message}
+                  </div>
 
-                {/* Image placeholder for Song Chewie */}
-                {item.hasImage && (
-                  <div className='w-full h-24 sm:h-32 bg-gray-600 rounded-lg mb-2 sm:mb-3 flex items-center justify-center'>
-                    <span className='text-gray-400 text-xs sm:text-sm'>
-                      Image
-                    </span>
-                  </div>
-                )}
+                  {/* Image placeholder for Song Chewie */}
+                  {item.hasImage && (
+                    <div className='w-full h-24 sm:h-32 bg-gray-600 rounded-lg mb-2 sm:mb-3 flex items-center justify-center'>
+                      <span className='text-gray-400 text-xs sm:text-sm'>
+                        Image
+                      </span>
+                    </div>
+                  )}
 
-                <div className='flex items-center justify-between'>
-                  <div className='flex items-center space-x-3 sm:space-x-4 text-gray-400 text-xs'>
-                    <button className='hover:text-white flex items-center space-x-1'>
-                      <span>💬</span>
-                    </button>
-                    <button className='hover:text-white flex items-center space-x-1'>
-                      <span>🔄</span>
-                    </button>
-                    <button className='hover:text-white flex items-center space-x-1'>
-                      <span>❤️</span>
-                    </button>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center space-x-3 sm:space-x-4 text-gray-400 text-xs'>
+                      <button className='hover:text-white flex items-center space-x-1'>
+                        <span>💬</span>
+                      </button>
+                      <button className='hover:text-white flex items-center space-x-1'>
+                        <span>🔄</span>
+                      </button>
+                      <button className='hover:text-white flex items-center space-x-1'>
+                        <span>❤️</span>
+                      </button>
+                    </div>
+                    <div className='text-gray-400 text-xs'>40K</div>
                   </div>
-                  <div className='text-gray-400 text-xs'>40K</div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </div>
