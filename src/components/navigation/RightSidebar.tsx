@@ -1,30 +1,32 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Rss, LogIn } from 'lucide-react';
+import { Rss, LogIn, UserRoundPen } from 'lucide-react';
 
 export default function RightSidebar() {
   return (
     <div className='w-full h-full flex flex-col p-3 sm:p-4 space-y-3 sm:space-y-4'>
-      {/* Profile and Feed - Same line layout */}
-      <div className='flex justify-between items-end mb-0'>
+      <div className='flex items-end mb-0'>
         {/* Profile - Left side */}
-        <div className='flex items-center space-x-2'>
-          <div className='w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center'>
-            <span className='text-white text-xs sm:text-sm'>👤</span>
-          </div>
-          <span className='text-gray-300 text-xs sm:text-sm font-medium'>Profile</span>
+        <div className='flex items-center space-x-2 text-xxs mb-2'>
+          <UserRoundPen className='w-4 h-4 ' />
+          <span className='text-gray-300  font-medium'>Profile</span>
           <span className='text-gray-400 hidden sm:inline'>|</span>
-          <span className='text-gray-300 text-xs sm:text-sm truncate'>0x78..0x78</span>
+          <span className='text-gray-300 truncate'>0x78..0x78</span>
           <LogIn className='w-4 h-4' />
           <div className='absolute inset-0 opacity-0'>
             <ConnectButton />
           </div>
         </div>
 
-        {/* Feed Tab - Right side */}
+        {/* Spacer */}
+        <div className='flex-1'></div>
+
+        {/* Feed Tab - Right aligned but not floating */}
         <div className='relative bg-gray-800 px-3 sm:px-4 py-1.5 sm:py-2 rounded-t-lg'>
           <div className='flex items-center space-x-2'>
             <Rss className='text-gray-300 w-4 h-4' />
-            <span className='text-gray-300 text-xs sm:text-sm font-medium'>Feed</span>
+            <span className='text-gray-300 text-xs sm:text-sm font-medium'>
+              Feed
+            </span>
           </div>
         </div>
       </div>
@@ -34,7 +36,9 @@ export default function RightSidebar() {
         <div className='flex items-center space-x-3 mb-3 sm:mb-4'>
           <div className='w-8 h-8 sm:w-10 sm:h-10 bg-gray-600 rounded-full'></div>
           <div>
-            <div className='text-white font-medium text-sm sm:text-base'>What's happening?</div>
+            <div className='text-white font-medium text-sm sm:text-base'>
+              What's happening?
+            </div>
           </div>
         </div>
 
@@ -118,7 +122,9 @@ export default function RightSidebar() {
                 {/* Image placeholder for Song Chewie */}
                 {item.hasImage && (
                   <div className='w-full h-24 sm:h-32 bg-gray-600 rounded-lg mb-2 sm:mb-3 flex items-center justify-center'>
-                    <span className='text-gray-400 text-xs sm:text-sm'>Image</span>
+                    <span className='text-gray-400 text-xs sm:text-sm'>
+                      Image
+                    </span>
                   </div>
                 )}
 
