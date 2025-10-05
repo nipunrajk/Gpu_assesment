@@ -1,18 +1,16 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { Rss, LogIn } from 'lucide-react';
 
 export default function RightSidebar() {
   return (
-    <div className='w-full p-4'>
-      {/* Header with Profile and Feed */}
-      <div className='flex items-start justify-between mb-6'>
-        {/* Profile - Clickable with L-shaped border - Now uses ConnectButton directly */}
+    <div className='w-full h-full flex flex-col p-4 space-y-4'>
+      {/* Profile and Feed - Standalone elements at top */}
+      <div className='flex justify-between  items-center mb-0'>
+        {/* Profile - Standalone element */}
         <div
-          className='relative flex items-center space-x-2 hover:bg-gray-700 px-3 py-2 transition-colors bg-gray-800 border-2 border-gray-600'
+          className='flex items-center space-x-2 mb-1'
           style={{
             borderRadius: '8px',
-            borderBottomRightRadius: '0px',
-            borderRight: 'none',
-            borderBottom: 'none',
           }}
         >
           <div className='w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center'>
@@ -21,44 +19,23 @@ export default function RightSidebar() {
           <span className='text-gray-300 text-sm font-medium'>Profile</span>
           <span className='text-gray-400'>|</span>
           <span className='text-gray-300 text-sm'>0x78..0x78</span>
-          {/* Refresh/Connect icon */}
-          <svg
-            className='w-4 h-4 text-gray-400 ml-2'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
-            />
-          </svg>
-          {/* Hidden ConnectButton that triggers the modal */}
+          <LogIn />
           <div className='absolute inset-0 opacity-0'>
             <ConnectButton />
           </div>
         </div>
 
-        {/* Feed Label with RSS icon and orange underline */}
+        {/* Feed Label - Standalone element */}
         <div className='flex flex-col items-center'>
-          <div className='flex items-center space-x-2 mb-1'>
-            <svg
-              className='w-4 h-4 text-gray-300'
-              fill='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path d='M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248S0 22.546 0 20.752s1.456-3.248 3.252-3.248 3.251 1.454 3.251 3.248zM1.677 6.082v4.15c6.988 0 12.65 5.663 12.65 12.65h4.15c0-9.296-7.504-16.8-16.8-16.8zM1.677.901v4.15C14.475 5.051 24.926 15.502 24.926 28.3H29.076C29.076 12.98 16.997.901 1.677.901z' />
-            </svg>
+          <div className='relative flex items-center space-x-2 hover:bg-gray-700 px-3 py-2 transition-colors bg-gray-800 border-2 border-gray-600'>
+            <Rss />
             <span className='text-gray-300 text-sm font-medium'>Feed</span>
           </div>
-          <div className='w-full h-0.5 bg-orange-500'></div>
         </div>
       </div>
 
-      {/* Profile Section */}
-      <div className='mb-6'>
+      {/* Post Composer - Separate standalone container */}
+      <div className='bg-gray-800 border-2 border-gray-600 rounded-lg p-4'>
         <div className='flex items-center space-x-3 mb-4'>
           <div className='w-10 h-10 bg-gray-600 rounded-full'></div>
           <div>
@@ -66,7 +43,7 @@ export default function RightSidebar() {
           </div>
         </div>
 
-        <div className='bg-gray-800 rounded-lg p-3 mb-3 border border-gray-700'>
+        <div className='bg-gray-700 rounded-lg p-3 mb-3 border border-gray-600'>
           <input
             type='text'
             placeholder='Share your thoughts...'
@@ -74,13 +51,33 @@ export default function RightSidebar() {
           />
         </div>
 
-        <button className='w-full bg-white hover:bg-gray-100 text-black py-2 rounded-lg font-medium'>
-          Post
-        </button>
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center space-x-3 text-gray-400'>
+            <button className='hover:text-white'>
+              <svg
+                className='w-5 h-5'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
+                />
+              </svg>
+            </button>
+            <button className='hover:text-white text-sm'>GIF</button>
+          </div>
+          <button className='bg-white hover:bg-gray-100 text-black px-6 py-2 rounded-lg font-medium text-sm'>
+            Post Now
+          </button>
+        </div>
       </div>
 
-      {/* Activity Feed */}
-      <div className='space-y-4'>
+      {/* Activity Feed - Scrollable container */}
+      <div className='flex-1 overflow-y-auto space-y-4'>
         {/* Activity Items */}
         {[
           {
@@ -95,7 +92,7 @@ export default function RightSidebar() {
             time: '4h',
             message:
               'New GPU cluster available in US East region. Perfect for ML training workloads.',
-            reactions: '❤️ 💬 🔄',
+            reactions: '❤️ 💬 �',
           },
           {
             name: 'Song Chewie',
@@ -108,7 +105,7 @@ export default function RightSidebar() {
         ].map((item, index) => (
           <div
             key={index}
-            className='bg-gray-800 rounded-lg p-4 border border-gray-700'
+            className='bg-gray-700 rounded-lg p-4 border border-gray-600'
           >
             <div className='flex items-start space-x-3'>
               <div className='w-8 h-8 bg-gray-600 rounded-full flex-shrink-0'></div>
@@ -125,7 +122,7 @@ export default function RightSidebar() {
 
                 {/* Image placeholder for Song Chewie */}
                 {item.hasImage && (
-                  <div className='w-full h-32 bg-gray-700 rounded-lg mb-3 flex items-center justify-center'>
+                  <div className='w-full h-32 bg-gray-600 rounded-lg mb-3 flex items-center justify-center'>
                     <span className='text-gray-400 text-sm'>Image</span>
                   </div>
                 )}
@@ -150,5 +147,6 @@ export default function RightSidebar() {
         ))}
       </div>
     </div>
+    // </div>
   );
 }

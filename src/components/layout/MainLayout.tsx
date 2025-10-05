@@ -1,5 +1,4 @@
 import Sidebar from '../navigation/Sidebar';
-import TopHeader from '../navigation/TopHeader';
 import Dashboard from '../dashboard/Dashboard';
 import RightSidebar from '../navigation/RightSidebar';
 
@@ -12,10 +11,9 @@ export default function MainLayout() {
       </div>
 
       {/* Main Content Area */}
-      <div className='flex-1 flex flex-col'>
+      <div className='flex-1 flex flex-col bg-neutral-900'>
         {/* Main Dashboard */}
         <main className='flex-1 flex overflow-hidden'>
-          {/* Main Content with Gray Background and TopHeader (70%) */}
           <div
             className='flex-1 flex flex-col m-2 rounded-lg overflow-hidden'
             style={{ flexBasis: '70%' }}
@@ -30,16 +28,14 @@ export default function MainLayout() {
                   <span>💰 Earn $000 Drop</span>
                 </div>
               </div>
-              <TopHeader />
               <div className='p-6 flex-1 overflow-y-auto'>
                 <Dashboard />
               </div>
             </div>
           </div>
 
-          {/* Right Sidebar - Social Feed with Gray Background (30%) */}
           <div
-            className='hidden xl:block bg-gray-800 m-2 rounded-lg overflow-y-auto'
+            className='hidden xl:block m-2 overflow-y-auto'
             style={{ flexBasis: '30%' }}
           >
             <RightSidebar />
