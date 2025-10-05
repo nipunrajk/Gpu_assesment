@@ -105,7 +105,7 @@ export default function AstraSection() {
         </div>
 
         {/* Try Astra Section */}
-        <div className='bg-gray-900 rounded-lg p-4 border border-gray-800'>
+        <div className='bg-gray-900 rounded-lg p-4 border border-gray-800 mb-6'>
           <div className='flex items-center space-x-4'>
             <div className='w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center'>
               <span className='text-white text-lg font-bold'>A</span>
@@ -117,6 +117,70 @@ export default function AstraSection() {
                 models powered by GPU with exclusive partnership with{' '}
                 <span className='text-blue-400'>AI Devtools</span>
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Datacenter Stats - Single Row */}
+        <div className='bg-gray-900 rounded-lg border border-gray-800 overflow-hidden'>
+          <div className='flex'>
+            {/* Our Datacenter in Glance */}
+            <div className='flex-1 p-6 border-r border-gray-800'>
+              <div className='text-gray-400 text-sm mb-2'>
+                Our Datacenter in Glance
+              </div>
+              <div className='text-white text-4xl font-bold mb-1'>4,254</div>
+              <div className='text-orange-400 text-sm flex items-center'>
+                <span>99.9% Uptime</span>
+                <svg
+                  className='w-3 h-3 ml-1'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z'
+                    clipRule='evenodd'
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* United States */}
+            <div className='flex-1 p-6 border-r border-gray-800 text-center'>
+              <div className='text-gray-400 text-sm mb-2'>United States</div>
+              <div className='text-white text-3xl font-bold'>508</div>
+              <div className='text-gray-400 text-sm'>GPUs</div>
+            </div>
+
+            {/* United Kingdom */}
+            <div className='flex-1 p-6 border-r border-gray-800 text-center'>
+              <div className='text-gray-400 text-sm mb-2'>United Kingdom</div>
+              <div className='text-white text-3xl font-bold'>354</div>
+              <div className='text-gray-400 text-sm'>GPUs</div>
+            </div>
+
+            {/* United Arab Emirates */}
+            <div className='flex-1 p-6 border-r border-gray-800 text-center'>
+              <div className='text-gray-400 text-sm mb-2'>
+                United Arab Emirates
+              </div>
+              <div className='text-white text-3xl font-bold'>154</div>
+              <div className='text-gray-400 text-sm'>GPUs</div>
+            </div>
+
+            {/* Australia */}
+            <div className='flex-1 p-6 border-r border-gray-800 text-center'>
+              <div className='text-gray-400 text-sm mb-2'>Australia</div>
+              <div className='text-white text-3xl font-bold'>104</div>
+              <div className='text-gray-400 text-sm'>GPUs</div>
+            </div>
+
+            {/* Spain */}
+            <div className='flex-1 p-6 text-center'>
+              <div className='text-gray-400 text-sm mb-2'>Spain</div>
+              <div className='text-white text-3xl font-bold'>21</div>
+              <div className='text-gray-400 text-sm'>GPUs</div>
             </div>
           </div>
         </div>
