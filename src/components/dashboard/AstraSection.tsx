@@ -107,7 +107,7 @@ export default function AstraSection() {
           {/* Mobile: Stack vertically, Desktop: Horizontal */}
           <div className='flex flex-col sm:flex-row'>
             {/* Our Datacenter in Glance */}
-            <div className='flex p-4 sm:p-6 border-b sm:border-b-0 sm:border-r border-gray-800'>
+            <div className='p-4 sm:p-6 border-b sm:border-b-0 sm:border-r border-gray-800'>
               <div className='text-gray-400 text-xs sm:text-sm mb-2'>
                 Our Datacenter in Glance
               </div>
