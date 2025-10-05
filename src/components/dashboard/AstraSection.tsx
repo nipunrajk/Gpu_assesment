@@ -1,3 +1,5 @@
+import { ChartNoAxesCombined } from 'lucide-react';
+
 export default function AstraSection() {
   return (
     <div className='mb-8'>
@@ -74,15 +76,7 @@ export default function AstraSection() {
             <div className='text-white text-2xl font-bold'>$0.43</div>
             {/* Mini chart */}
             <div className='absolute top-2 right-2 w-16 h-8'>
-              <svg
-                className='w-full h-full text-orange-400'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='1'
-              >
-                <path d='M0 6 L4 4 L8 2 L12 1 L16 0' />
-                <circle cx='16' cy='0' r='1' fill='currentColor' />
-              </svg>
+              <ChartNoAxesCombined />
             </div>
           </div>
         </div>
