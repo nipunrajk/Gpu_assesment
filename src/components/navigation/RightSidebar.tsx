@@ -31,52 +31,54 @@ export default function RightSidebar() {
         </div>
       </div>
 
-      {/* Post Composer - Connected to Feed tab */}
-      <div className='bg-gray-800 p-3 sm:p-4 mb-3 sm:mb-4'>
-        <div className='flex items-center space-x-3 mb-3 sm:mb-4'>
-          <div className='w-8 h-8 sm:w-10 sm:h-10 bg-gray-600 rounded-full'></div>
-          <div>
-            <div className='text-white font-medium text-sm sm:text-base'>
-              What's happening?
+      {/* Unified Feed Container */}
+      <div className='flex-1 bg-gray-800 rounded-b-lg rounded-tr-none flex flex-col'>
+        {/* Post Composer */}
+        <div className='p-3 sm:p-4 border-b border-gray-700'>
+          <div className='flex items-center space-x-3 mb-3 sm:mb-4'>
+            <div className='w-8 h-8 sm:w-10 sm:h-10 bg-gray-600 rounded-full'></div>
+            <div>
+              <div className='text-white font-medium text-sm sm:text-base'>
+                What's happening?
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className='bg-gray-700 rounded-lg p-2 sm:p-3 mb-2 sm:mb-3 border border-gray-600'>
-          <input
-            type='text'
-            placeholder='Share your thoughts...'
-            className='w-full bg-transparent text-white placeholder-gray-400 outline-none text-xs sm:text-sm'
-          />
-        </div>
-
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center space-x-2 sm:space-x-3 text-gray-400'>
-            <button className='hover:text-white'>
-              <svg
-                className='w-4 h-4 sm:w-5 sm:h-5'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
-                />
-              </svg>
-            </button>
-            <button className='hover:text-white text-xs sm:text-sm'>GIF</button>
+          <div className='bg-gray-700 rounded-lg p-2 sm:p-3 mb-2 sm:mb-3 border border-gray-600'>
+            <input
+              type='text'
+              placeholder='Share your thoughts...'
+              className='w-full bg-transparent text-white placeholder-gray-400 outline-none text-xs sm:text-sm'
+            />
           </div>
-          <button className='bg-white hover:bg-gray-100 text-black px-4 sm:px-6 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm'>
-            Post Now
-          </button>
-        </div>
-      </div>
 
-      {/* Activity Feed - Scrollable container */}
-      <div className='flex-1 overflow-y-auto space-y-3 sm:space-y-4'>
+          <div className='flex items-center justify-between'>
+            <div className='flex items-center space-x-2 sm:space-x-3 text-gray-400'>
+              <button className='hover:text-white'>
+                <svg
+                  className='w-4 h-4 sm:w-5 sm:h-5'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
+                  />
+                </svg>
+              </button>
+              <button className='hover:text-white text-xs sm:text-sm'>GIF</button>
+            </div>
+            <button className='bg-white hover:bg-gray-100 text-black px-4 sm:px-6 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm'>
+              Post Now
+            </button>
+          </div>
+        </div>
+
+        {/* Activity Feed - Inside same container */}
+        <div className='flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4'>
         {/* Activity Items */}
         {[
           {
@@ -146,6 +148,7 @@ export default function RightSidebar() {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
