@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import MobileMenu from './MobileMenu';
 
 export default function TopHeader() {
@@ -40,9 +39,9 @@ export default function TopHeader() {
             </div>
           </div>
 
-          {/* Right side - Wallet Connection */}
+          {/* Right side - Empty for now */}
           <div className='flex items-center space-x-4'>
-            <ConnectButton />
+            {/* No buttons here anymore */}
           </div>
         </div>
       </header>

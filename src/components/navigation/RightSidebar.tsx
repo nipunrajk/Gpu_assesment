@@ -1,20 +1,60 @@
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 export default function RightSidebar() {
   return (
     <div className='w-full p-4'>
       {/* Header with Profile and Feed */}
-      <div className='flex items-center justify-between mb-6 pb-4 border-b border-gray-700'>
-        {/* Profile */}
-        <div className='flex items-center space-x-2'>
+      <div className='flex items-start justify-between mb-6'>
+        {/* Profile - Clickable with L-shaped border - Now uses ConnectButton directly */}
+        <div
+          className='relative flex items-center space-x-2 hover:bg-gray-700 px-3 py-2 transition-colors bg-gray-800 border-2 border-gray-600'
+          style={{
+            borderRadius: '8px',
+            borderBottomRightRadius: '0px',
+            borderRight: 'none',
+            borderBottom: 'none',
+          }}
+        >
           <div className='w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center'>
             <span className='text-white text-sm'>👤</span>
           </div>
-          <span className='text-gray-300 text-sm'>Profile</span>
+          <span className='text-gray-300 text-sm font-medium'>Profile</span>
           <span className='text-gray-400'>|</span>
           <span className='text-gray-300 text-sm'>0x78..0x78</span>
+          {/* Refresh/Connect icon */}
+          <svg
+            className='w-4 h-4 text-gray-400 ml-2'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
+            />
+          </svg>
+          {/* Hidden ConnectButton that triggers the modal */}
+          <div className='absolute inset-0 opacity-0'>
+            <ConnectButton />
+          </div>
         </div>
 
-        {/* Feed Label */}
-        <span className='text-gray-300 text-sm font-medium'>Feed</span>
+        {/* Feed Label with RSS icon and orange underline */}
+        <div className='flex flex-col items-center'>
+          <div className='flex items-center space-x-2 mb-1'>
+            <svg
+              className='w-4 h-4 text-gray-300'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <path d='M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248S0 22.546 0 20.752s1.456-3.248 3.252-3.248 3.251 1.454 3.251 3.248zM1.677 6.082v4.15c6.988 0 12.65 5.663 12.65 12.65h4.15c0-9.296-7.504-16.8-16.8-16.8zM1.677.901v4.15C14.475 5.051 24.926 15.502 24.926 28.3H29.076C29.076 12.98 16.997.901 1.677.901z' />
+            </svg>
+            <span className='text-gray-300 text-sm font-medium'>Feed</span>
+          </div>
+          <div className='w-full h-0.5 bg-orange-500'></div>
+        </div>
       </div>
 
       {/* Profile Section */}
