@@ -55,11 +55,9 @@ export default function AstraSection() {
                 $GPU Price
               </div>
             </div>
-            <div className='text-white text-xl sm:text-2xl font-bold'>
+            <div className='flex items-center text-white text-xl sm:text-2xl font-bold'>
               $0.43
-            </div>
-            <div className='absolute top-2 right-2 w-12 h-6 sm:w-16 sm:h-8'>
-              <ChartNoAxesCombined className='w-full h-full' />
+              <ChartNoAxesCombined className='w-full h-full w-12 h-6 sm:w-16 sm:h-8' />
             </div>
           </div>
         </div>
