@@ -4,7 +4,7 @@ A modern Web3 GPU marketplace dashboard built with React, TypeScript, and Tailwi
 
 ## 🚀 Live Demo
 
-**Hosted URL:** [Coming Soon - Deploy to Vercel/Netlify]
+**Hosted URL:** https://gpu-assesment.vercel.app/
 
 ## 📁 Project Structure
 
@@ -71,13 +71,6 @@ src/
    npm install
    ```
 
-3. **Configure Environment Variables**
-   Create a `.env` file in the root directory:
-   ```env
-   VITE_WALLET_CONNECT_PROJECT_ID=your_project_id_here
-   ```
-   Get your project ID from [WalletConnect Cloud](https://cloud.walletconnect.com/)
-
 4. **Start development server**
    ```bash
    npm run dev
@@ -123,51 +116,6 @@ This project implements a pixel-perfect GPU marketplace dashboard with:
 - **Touch-Friendly:** Optimized button sizes and interactions
 - **Responsive Typography:** Text scales appropriately across devices
 
-## 🚀 Deployment
-
-### Vercel Deployment
-
-1. **Connect your repository to Vercel**
-2. **Configure environment variables:**
-   - `VITE_WALLET_CONNECT_PROJECT_ID`
-3. **Deploy with automatic builds on commits**
-
-### Netlify Deployment
-
-1. **Connect repository to Netlify**
-2. **Build settings:**
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. **Environment variables:** Add `VITE_WALLET_CONNECT_PROJECT_ID`
-
-## 🧪 Performance Optimizations
-
-- **Code Splitting:** Components lazy-loaded where appropriate
-- **Optimized Images:** Proper image sizing and formats
-- **Minimal Bundle:** Tree-shaking and efficient imports
-- **CSS Optimization:** TailwindCSS purging unused styles
-
-## 📋 Code Quality Standards
-
-- **TypeScript:** Full type safety throughout the application
-- **File Size Limit:** Each file kept under 200 lines
-- **Component Structure:** Modular, reusable components
-- **Clean Code:** Readable, maintainable code with proper naming
-- **No Inline Styles:** All styling via TailwindCSS classes
-
-## 🎯 Assessment Requirements Met
-
-✅ **Design Implementation:** Pixel-perfect UI matching Figma design  
-✅ **Responsiveness:** Full desktop and mobile responsiveness  
-✅ **TailwindCSS:** Complete styling via Tailwind classes  
-✅ **Wallet Integration:** RainbowKit wallet connection  
-✅ **Interactive Elements:** All buttons and UI elements functional  
-✅ **State Management:** React Context API implementation  
-✅ **Code Quality:** Files under 200 lines, clean structure  
-✅ **Performance:** Optimized components and lazy loading  
-✅ **Documentation:** Comprehensive README with setup instructions  
-✅ **Hosting:** Ready for deployment on Vercel/Netlify  
-
 ## 📝 Scripts
 
 ```bash
@@ -177,19 +125,3 @@ npm run preview      # Preview production build
 npm run lint         # Run ESLint
 npm run type-check   # TypeScript type checking
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-**Built with ❤️ for the GPU.NET marketplace assessment**
