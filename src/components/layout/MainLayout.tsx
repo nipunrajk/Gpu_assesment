@@ -9,7 +9,7 @@ export default function MainLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className='min-h-screen bg-gray-950 text-white flex flex-col md:flex-row overflow-hidden'>
+    <div className='min-h-screen bg-black text-white flex flex-col md:flex-row overflow-hidden'>
       {/* Mobile Menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
@@ -63,7 +63,7 @@ export default function MainLayout() {
                 </div>
               </div>
             </div>
-            <div className='bg-gray-900 rounded-lg flex flex-col h-full'>
+            <div className='bg-gray-800 rounded-lg flex flex-col h-full'>
               <div className='p-3 sm:p-6 flex-1 overflow-y-auto'>
                 <Dashboard />
               </div>

@@ -15,7 +15,7 @@ export default function AstraSection() {
         {/* 4 Stats Cards in responsive grid */}
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 mb-4'>
           {/* Active Users */}
-          <div className='bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg p-3 sm:p-4 border border-orange-500/30'>
+          <div className='bg-black p-3 sm:p-4 '>
             <div className='flex items-center space-x-2 mb-2'>
               <Users />
               <div className='text-orange-400 text-xs sm:text-sm'>
@@ -26,7 +26,7 @@ export default function AstraSection() {
           </div>
 
           {/* Total Subnets */}
-          <div className='bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg p-3 sm:p-4 border border-orange-500/30'>
+          <div className='bg-black p-3 sm:p-4 '>
             <div className='flex items-center space-x-2 mb-2'>
               <List />
               <div className='text-orange-400 text-xs sm:text-sm'>
@@ -37,7 +37,7 @@ export default function AstraSection() {
           </div>
 
           {/* $GPU Distributed */}
-          <div className='bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg p-3 sm:p-4 border border-orange-500/30'>
+          <div className='bg-black p-3 sm:p-4 '>
             <div className='flex items-center space-x-2 mb-2'>
               <Database />
               <div className='text-orange-400 text-xs sm:text-sm'>
@@ -48,7 +48,7 @@ export default function AstraSection() {
           </div>
 
           {/* $GPU Price with Chart */}
-          <div className='bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg p-3 sm:p-4 border border-orange-500/30 relative'>
+          <div className='bg-black p-3 sm:p-4'>
             <div className='flex items-center space-x-2 mb-2'>
               <RadioTower />
               <div className='text-orange-400 text-xs sm:text-sm'>
@@ -65,7 +65,7 @@ export default function AstraSection() {
         </div>
 
         {/* Stretched Join Subnet Banner */}
-        <div className='bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-500/30 rounded-lg p-3 sm:p-4 mb-4'>
+        <div className='bg-black border-orange-500/30 rounded-lg p-3 sm:p-4 mb-4'>
           <div className='flex items-center space-x-3'>
             <div className='flex -space-x-2'>
               <div className='w-6 h-6 sm:w-8 sm:h-8 bg-gray-600 rounded-full border-2 border-gray-800'></div>
@@ -82,7 +82,7 @@ export default function AstraSection() {
         </div>
 
         {/* Try Astra Section */}
-        <div className='bg-gray-900 rounded-lg p-3 sm:p-4 border border-gray-800 mb-6'>
+        <div className='bg-black rounded-lg p-3 sm:p-4 border border-gray-800 mb-6'>
           <div className='flex items-center space-x-4'>
             <div className='w-10 h-10 sm:w-12 sm:h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0'>
               <span className='text-white text-base sm:text-lg font-bold'>
@@ -103,7 +103,7 @@ export default function AstraSection() {
         </div>
 
         {/* Datacenter Stats - Responsive Layout */}
-        <div className='bg-gray-900 rounded-lg border border-gray-800 overflow-hidden'>
+        <div className='bg-black rounded-lg border border-gray-800 overflow-hidden'>
           {/* Mobile: Stack vertically, Desktop: Horizontal */}
           <div className='flex flex-col sm:flex-row'>
             {/* Our Datacenter in Glance */}

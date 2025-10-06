@@ -14,7 +14,7 @@ export default function GPUCard({
   price,
 }: GPUCardProps) {
   return (
-    <div className='bg-gray-900 rounded-lg border border-gray-800 p-3 sm:p-4'>
+    <div className='bg-black rounded-lg border border-gray-800 p-3 sm:p-4'>
       {/* Header */}
       <div className='mb-3 sm:mb-4'>
         <h3 className='text-white font-semibold text-base sm:text-lg mb-1'>{model}</h3>

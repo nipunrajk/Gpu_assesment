@@ -12,7 +12,7 @@ import { useAppContext } from '../../context/AppContext';
 export default function Sidebar() {
   // Local state for immediate UI responsiveness
   const [activeItem, setActiveItem] = useState('dapp');
-  
+
   // Context API for assessment (demonstrates proper usage)
   const { setActiveNavItem, dashboardData } = useAppContext();
 
@@ -23,7 +23,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className='w-56 lg:w-60 xl:w-64 bg-black border-r border-gray-800 flex flex-col h-screen flex-shrink-0'>
+    <div className='w-56 lg:w-60 xl:w-64 border-r border-gray-800 flex flex-col h-screen flex-shrink-0'>
       {/* Logo */}
       <div className='p-4 sm:p-6 pb-0'>
         <div className='flex items-center space-x-3'>
@@ -174,7 +174,9 @@ export default function Sidebar() {
         {/* Status */}
         <div className='flex items-center space-x-2 mb-1 sm:mb-2'>
           <div className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full'></div>
-          <span className='text-gray-400 text-xs'>{dashboardData.systemStatus}</span>
+          <span className='text-gray-400 text-xs'>
+            {dashboardData.systemStatus}
+          </span>
         </div>
 
         {/* Copyright */}
